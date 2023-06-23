@@ -1,0 +1,337 @@
+//Renverser les valeurs d'un tableau
+
+const table = [2,3,34,8,6,10];
+
+for(i=table.length-1 ;i=0 ; i--)
+{
+	console.log(table[i]);
+}
+
+
+
+//Trouver le maximum d'un Tableau 
+
+const table = [1,2,4,5,9,78,3];
+
+ var keep= table[0];
+
+for(i=1; i<table.length ; i++)
+{
+ 
+	if(keep<=table[i])
+	{
+		keep = table[i];
+	}
+	else{
+	keep = keep;
+	}
+}
+
+console.log(keep);
+
+
+
+
+//Trouver le maximum d'un Tableau 
+
+const table = [1,34,90,45,67,23];
+
+let max = Math.max.apply(null,table);
+ console.log(max);
+
+
+
+//Triangle rectangle d'asterix
+
+let nb = prompt("Entrer le nombre de ligne que vous desisez voir");
+
+ for(let i=1; i<=nb; i++)
+ {
+ var keep =" ";
+ for(let j=1; j<=i;j++)
+ {
+  keep+="*";
+ }
+ console.log(keep);
+  var keep =" ";
+ }
+
+
+
+//Nombre le plus utilisé et nombre de répétition
+
+const table = [1,56,8,1,9,9,4,1,2,1];
+
+ var i=0;
+   var compt =1;
+
+ 	for(let j=i+1; j<table.length; j++)
+  {
+
+	if(table[i]==table[j])
+	{
+	compt=compt+1;
+	}
+	else{
+	compt=compt;
+	}
+
+  }
+ 
+
+ var a= compt;
+ var b=i;
+
+
+for(i =1; i<table.lenght; i++)
+{
+ 
+   compt =1;
+   
+	for(let j=i+1; j<table.length; j++)
+  {
+
+	if(table[i] == table[j])
+	{
+	compt=compt+1;
+	}
+	else{
+	compt=compt;
+	}
+
+  }
+  
+
+   if(compt>a)
+   {
+   	a=compt;
+	b=i;
+   }
+	
+
+}
+
+console.log("Le nombre qui se répète le plus est : "+table[b]+" et il est répété "+a+" fois!");
+
+
+//Palyndrome vérification 
+
+
+let word = "madam";
+
+const table = word.split("");
+	
+const table2=[];
+
+for(i=table.length-1; i>=0; i--)
+{
+	table2.push(table[i]);
+}
+
+function isEqual(table, table2) {
+ 
+  return table.every((value, index) => value === table2[index])
+}
+
+let resultat = isEqual(table, table2)
+
+console.log(resultat)
+
+
+//Recherche de valeur dans un tableau
+ 
+ const tableau=[0,12,34,23,1,18,34];
+const nb=0;
+
+function find(arr, value) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === value) {
+      return i;
+    }
+  }
+  return -1;
+}
+console.log(find(tableau,nb));
+
+// Nombre premier 
+
+var nb = 12;
+	var compt=1;
+	var keep = 0;
+for(i=1; i<=12 ; i++ )
+{
+  keep=nb%i;
+  if(keep==0)
+  {
+  	compt+=1;
+  }
+
+}
+
+if( compt==2)
+{
+	console.log("Il s'agit d'un nombre premier");
+}
+else
+{
+	console.log("Ce nombre n'est pas premier");
+}
+
+//Nombre parfait: Un nombre est considéré comme parfait si la somme de ses diviseurs est égale a lui meme
+
+var number = 28;
+var somme2 = 0;
+var keep = 0;
+
+
+   var tab = [];
+     var j =0;
+ for(i=0; i<number; i++)
+ {
+ 	  keep = number%i;
+ 	  if( keep == 0)
+ 	  	{tab[j]=i;
+   j+=1;}
+   
+ }
+
+ console.log(tab);
+
+ for(i=0; i<tab.length; i++)
+ {
+ 	somme2+= tab[i];
+ }
+
+if (somme2==number)
+{
+	console.log("true");
+}
+else {
+	console.log("false");
+}
+
+// Mettre en majuscule les mots contenant un tiret
+
+function capitalizeHyphenatedWords(str) {
+  return str.replace(/-([a-z])/g, function(match, letter) {
+    return letter.toUpperCase();
+  });
+}
+
+console.log(capitalizeHyphenatedWords('background-color')); // Output: 'backgroundColor'
+console.log(capitalizeHyphenatedWords('-webkit-transition')); // Output: 'WebkitTransition'
+
+
+// Fonction parcourant des objets pour sortir ceux qui correspondent a des valeurs spécifiques
+
+
+function getFilteredArray(arr, obj) {
+  return arr.filter(function(student) {
+    for (var key in obj) {
+      if (student[key] !== obj[key]) {
+        return false;
+      }
+    }
+    return true;
+  });
+}
+
+const students = [
+  {
+    name: 'Mike',
+    gender: 'male',
+    age: 20
+  },
+  {
+    name: 'An',
+    gender: 'female',
+    age: 21
+  },
+  {
+    name: 'Lucy',
+    gender: 'female',
+    age: 20
+  },
+  {
+    name: 'John',
+    gender: 'male',
+    age: 21
+  },
+  {
+    name: 'Tom',
+    gender: 'male',
+    age: 22
+  }
+];
+
+console.log(getFilteredArray(students, { gender: 'male' }));
+// Output: [
+//   { name: 'Mike', gender: 'male', age: 20 },
+//   { name: 'John', gender: 'male', age: 21 },
+//   { name: 'Tom', gender: 'male', age: 22 }
+// ]
+
+console.log(getFilteredArray(students, { age: 21 }));
+// Output: [
+//   { name: 'An', gender: 'female', age: 21 },
+//   { name: 'John', gender: 'male', age: 21 }
+// ]
+
+
+
+//fonction recevant en paramètre un nom et le transformant en objet
+
+function transfer(string) {
+  let charCounts = {};
+  for (let char of string) {
+    charCounts[char] = (charCounts[char] || 0) + 1;
+  }
+  return charCounts;
+}
+
+const result = transfer("coffee");
+console.log(result);
+
+
+
+
+// Fontion permettant de convertir un objet en tableau
+
+const obj = {
+  c: 1,
+  o: 1,
+  f: 2,
+  e: 2
+};
+
+function objectToList(obj) {
+  return Object.entries(obj);
+}
+
+const pairs = objectToList(obj);
+console.log(pairs);
+
+
+
+// Fonction qui reçoit un argument et retourne un tableau de donnéés
+
+const users = [
+  { name: "Mike", age: 18, id: 1 },
+  { name: "An", age: 20, id: 2 },
+  { name: "Tom", age: 23, id: 3 },
+  { name: "Lucy", age: 25, id: 4 }
+];
+
+function getUserData(key) {
+  return users.map(user => user[key]);
+}
+
+const names = getUserData("name");
+console.log(names); // Output: ["Mike", "An", "Tom", "Lucy"]
+
+const ages = getUserData("age");
+console.log(ages); // Output: [18, 20, 23, 25]
+
+const ids = getUserData("id");
+console.log(ids); // Output: [1, 2, 3, 4]
+

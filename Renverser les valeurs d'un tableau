@@ -1,0 +1,137 @@
+Renverser les valeurs d'un tableau
+
+const table = []
+let len;
+len = prompt("Enter le nombre d'élement que doit contenir ce tableau");
+for(i=0; i<len; i++)
+{
+	table[i]=prompt("Remplisser le tableau");
+}
+
+for(i=table.length-1 ;i=0 ; i--)
+{
+	console.log(table[i]);
+}
+
+
+
+Trouver le maximum d'un Tableau 
+
+const table = []
+let len;
+len = prompt("Enter le nombre d'élement que doit contenir ce tableau");
+for(i=0; i<len; i++)
+{
+	table[i]=prompt("Remplisser le tableau");
+}
+ var keep= table[0];
+
+for(i=1; i<table.length ; i++)
+{
+ 
+	if(keep<=table[i])
+	{
+		keep = table[i];
+	}
+	else{
+	keep = keep;
+	}
+}
+
+console.log(keep);
+
+
+
+
+Trouver le maximum d'un Tableau 
+
+const table = []
+let len;
+len = prompt("Enter le nombre d'élement que doit contenir ce tableau");
+for(i=0; i<len; i++)
+{
+	table[i]=prompt("Remplisser le tableau");
+}
+let max = Math.max.apply(null,table);
+ console.log(max);
+
+
+
+Triangle rectangle d'asterix
+
+let nb = prompt("Entrer le nombre de ligne que vous desisez voir");
+
+ for(let i=1; i<=nb; i++)
+ {
+ var keep =" ";
+ for(let j=1; j<=i;j++)
+ {
+  keep+="*";
+ }
+ console.log(keep);
+  var keep =" ";
+ }
+
+
+
+Nombre le plus utilisé et nombre de répétition
+
+const table = [];
+let len;
+len = prompt("Enter le nombre d'élement que doit contenir ce tableau");
+for(i=0; i<len; i++)
+{
+	table[i]=prompt("Remplisser le tableau");
+}
+
+
+ var i=0;
+   var compt =1;
+
+ 	for(let j=i+1; j<table.length; j++)
+  {
+
+	if(table[i]==table[j])
+	{
+	compt=compt+1;
+	}
+	else{
+	compt=compt;
+	}
+
+  }
+ 
+
+ var a= compt;
+ var b=i;
+
+
+for(i =1; i<table.lenght; i++)
+{
+ 
+   compt =1;
+   
+	for(let j=i+1; j<table.length; j++)
+  {
+
+	if(table[i] == table[j])
+	{
+	compt=compt+1;
+	}
+	else{
+	compt=compt;
+	}
+
+  }
+  
+
+   if(compt>a)
+   {
+   	a=compt;
+	b=i;
+   }
+	
+
+}
+
+console.log("Le nombre qui se répète le plus est : "+table[b]+" et il est répété "+a+" fois!");

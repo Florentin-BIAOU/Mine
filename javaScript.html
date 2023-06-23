@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS </title>
+</head>
+<body>
+
+<h1>JAVASCRIPT TEST</h1>
+<p> Voici quelques tests du code de JavaScript!! </p>
+<h2> Comment renverser un tableau </h2>
+<p>Cliqer pour commencer </p>
+<button  onclick="inverseFunction()"> Try it </button>
+<p id="inversion"></p>
+
+<h2>Trouver le maximum d'un tableau </h2>
+<p> Cliquer pour commencer </p>
+<button id="maximum" onclick="maximumFunction()"> Try it </button>
+
+
+<h2> Ecrire un triangle d'asterixs </h2>
+<p> Cliquer pour commencer </p>
+<button id="triangle" onclick="triangleFunction()"> Try it </button>
+
+<h2>Nombre le plus utilisé et nombre de répétition </h2>
+<p> Cliquer pour commencer </p>
+<button id="one" onclick="oneFunction()"> Try it </button>
+
+
+<script > 
+
+function inverseFunction() {
+const table = [1,2,3,4,5,6];
+ document.getElementById("inversion").innerHTML=table;
+
+for(i=table.length-1 ;i=0 ; i--)
+{
+	document.getElementById("inversion").innerHTML=table[i];
+}
+
+}
+</script>
+
+
+
+
+
+</body>
+</html>
